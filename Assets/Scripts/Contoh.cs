@@ -20,8 +20,6 @@ public class Contoh : MonoBehaviour
         bool isExist = ListPlayer.Exists(element => element.name == "a");
         Debug.Log(isExist);
 
-        ListPlayer.Remove(element => element.name == "c");
-
         // for (int index = 0; index < ArrayPlayer.Length; index++)
         // {
         //     Debug.Log(ArrayPlayer[index].name);

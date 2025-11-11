@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351678091}
   - component: {fileID: 1351678090}
+  - component: {fileID: 1351678092}
   m_Layer: 0
   m_Name: obj1_0
   m_TagString: Untagged
@@ -427,6 +428,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1351678092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351678089}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48683dbd310b0f441ad94a46e100a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1763547672
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +470,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd814082d05424b40b6b8eac34d1bb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListPlayer:
+  - name: a
+    lvl: 8
+    health: 80
+  - name: b
+    lvl: 16
+    health: 160
+  - name: c
+    lvl: 20
+    health: 200
 --- !u!212 &1763547674
 SpriteRenderer:
   m_ObjectHideFlags: 0
