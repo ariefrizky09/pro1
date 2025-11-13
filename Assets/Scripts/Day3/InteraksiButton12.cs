@@ -8,7 +8,9 @@ public class InteraksiButton12 : MonoBehaviour
     //variabel skor dengan tipe data int untuk menyimpan data skor
     public int skor;
     //variabel TeksSkor dengan tipedata TMP_Text untuk mengubah nilai skor dari angka menjadi string
+    public int nyawa;
     public TMP_Text TeksSkor;
+    public TMP_Text TeksNyawa;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

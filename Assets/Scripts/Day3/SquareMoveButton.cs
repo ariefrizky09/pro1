@@ -19,25 +19,41 @@ public class SquareMoveButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.W))
+        {
+            gameObject.transform.Translate(0, kecepatan * Time.deltaTime, 0);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            gameObject.transform.Translate(0, -kecepatan * Time.deltaTime, 0);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            gameObject.transform.Translate(-kecepatan * Time.deltaTime, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            gameObject.transform.Translate(kecepatan * Time.deltaTime, 0, 0);
+        }
         //ini merupakan percabangan untuk menentukan arah gerak dari square
         //arah gerakan ditentukan dengan translate
         //variabel deklarasi arahGerak diambil dari enumerator
-        switch (arahGerak)
-        {
-            case ArahGerak.atas:
-                gameObject.transform.Translate(0, kecepatan * Time.deltaTime, 0);
-                break;
-            case ArahGerak.bawah:
-                gameObject.transform.Translate(0, -kecepatan * Time.deltaTime, 0);
-                break;
-            case ArahGerak.kiri:
-                gameObject.transform.Translate(-kecepatan * Time.deltaTime, 0, 0);
-                break;
-            case ArahGerak.kanan:
-                gameObject.transform.Translate(kecepatan * Time.deltaTime, 0, 0);
-                break;
+        // switch (arahGerak)
+        // {
+        //     case ArahGerak.atas:
+        //         gameObject.transform.Translate(0, kecepatan * Time.deltaTime, 0);
+        //         break;
+        //     case ArahGerak.bawah:
+        //         gameObject.transform.Translate(0, -kecepatan * Time.deltaTime, 0);
+        //         break;
+        //     case ArahGerak.kiri:
+        //         gameObject.transform.Translate(-kecepatan * Time.deltaTime, 0, 0);
+        //         break;
+        //     case ArahGerak.kanan:
+        //         gameObject.transform.Translate(kecepatan * Time.deltaTime, 0, 0);
+        //         break;
 
-        }
+        // }
     }
     //merupakan sebuah fungsi untuk mendeteksi tabrakan square dengan dinding dengan nama tag dinding
     //jika gameobject menabrak dinding sesuai dengan ketentuan arah, maka object akan berbalik ke arah yang berlawanan
@@ -68,12 +84,33 @@ public class SquareMoveButton : MonoBehaviour
         }
 
     }
+
+    // void KurangNyawa(Collision2D collision)
+    // {
+    //     if (collision.gameObject.CompareTag("bolajahat"))
+    //     {
+    //         Debug.Log("Nyawa -1");
+    //         //berfungsi untuk menambahkan skor serta memanggil fungsi TambahSkor
+    //         interaksiButton12.nyawa--;
+    //         bolaJahat.KurangNyawa();
+    //     }
+
+    // }
+
+
     //merupakan sebuah fungsi dengan nama TambahSkor digunakan untuk mengubah text skor
     //memanggil variabel dari code interaksiButton12 dengan variabel TeksSkor dan mengubahnya menjadi string
     public void TambahSkor()
     {
         interaksiButton12.TeksSkor.text = "Skor : " + interaksiButton12.skor.ToString();
     }
+    
+    // public void KurangNyawa()
+    // {
+    //     interaksiButton12.TeksNyawa.text = "Nyawa : " + interaksiButton12.nyawa.ToString();
+    // }
+
+    
 
 }
 
