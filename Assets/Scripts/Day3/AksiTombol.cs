@@ -12,6 +12,7 @@ public class AksiTombol : MonoBehaviour
     public Image image;
     // ubah text ketika klik
     public TMP_Text objectText;
+    //fungsi Aksi yang akan dipakai pada 
     public void Aksi()
     {
         image.sprite = assetGambar;
